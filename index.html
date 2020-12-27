@@ -1,1 +1,19 @@
-<script>alert('hello')</script>
+ <script type="text/javascript"> 
+
+function Char(str) {
+  var uchars = {};
+  str.replace(/\S/g, function (l) {
+    uchars[l] = (isNaN(uchars[l])) ? 1 : uchars[l] + 1
+  })
+  return uchars
+}
+var host = window.location.host;
+var count = Char(host);
+    if(count["."] == 3){
+        str = str.split(".")[0];
+        //str = str.split("//")[1];
+        console.log(str);
+    }else{
+        console.log("fuck you");
+    }
+</script>
